@@ -7,173 +7,103 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
-    body { font-family: 'Segoe UI', system-ui, sans-serif; }
-    .hero-bg { background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), url('https://source.unsplash.com/random/1600x900/?shopping') center/cover; }
-    .card-hover { transition: all 0.3s; }
-    .card-hover:hover { transform: translateY(-8px) scale(1.03); }
+    body { font-family: system-ui, sans-serif; }
+    .product-btn { transition: all 0.3s; }
+    .product-btn:hover { transform: translateY(-4px); box-shadow: 0 10px 20px rgba(249, 115, 22, 0.4); }
   </style>
 </head>
-<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+<body class="bg-zinc-950 text-white">
 
-  <!-- HEADER -->
-  <header class="bg-orange-600 text-white sticky top-0 z-50 shadow-lg">
-    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-      <h1 class="text-3xl font-bold">SOBAT<span class="text-yellow-300">88</span></h1>
-      <div class="flex items-center gap-4">
-        <button onclick="toggleDarkMode()" class="text-2xl"><i class="fas fa-moon"></i></button>
-        <a href="https://wa.me/62895705786677" target="_blank" 
-           class="bg-green-500 hover:bg-green-600 px-5 py-2.5 rounded-full font-semibold flex items-center gap-2">
-          <i class="fab fa-whatsapp"></i> WA
-        </a>
-      </div>
+  <div class="max-w-md mx-auto bg-black min-h-screen">
+
+    <!-- HEADER -->
+    <div class="bg-orange-600 py-6 text-center">
+      <h1 class="text-4xl font-bold tracking-tight">SOBAT<span class="text-yellow-300">88</span></h1>
+      <p class="text-sm mt-1 opacity-90">Rekomendasi Alvian • Viral & Unik</p>
     </div>
-  </header>
 
-  <!-- HERO -->
-  <section class="hero-bg text-white py-28 text-center">
-    <div class="max-w-4xl mx-auto px-4">
-      <h2 class="text-5xl md:text-7xl font-bold mb-4">Sobat88</h2>
-      <p class="text-2xl md:text-3xl mb-8">Barang Viral • Siomay Enak • Harga Mantap</p>
-      <div id="countdown" class="inline-flex gap-4 bg-black/50 backdrop-blur-md px-8 py-4 rounded-3xl text-xl mb-8"></div>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="#produk" class="bg-orange-500 hover:bg-orange-600 text-xl font-bold px-10 py-5 rounded-3xl">🛒 Belanja Sekarang</a>
-        <a href="https://wa.me/62895705786677" target="_blank" class="bg-green-600 hover:bg-green-700 text-xl font-bold px-10 py-5 rounded-3xl">🍲 Pesan Siomay</a>
-      </div>
+    <!-- PROMO TEXT -->
+    <div class="px-6 py-8 text-center border-b border-orange-900">
+      <p class="text-lg leading-relaxed">
+        "Bagi yang suka barang-barang unik dan murah, silakan klik tombol di bawah untuk belanja.<br>
+        Jangan lupa dengerin suara promonya ya!"
+      </p>
     </div>
-  </section>
 
-  <!-- SEARCH -->
-  <div class="max-w-6xl mx-auto px-4 -mt-6 relative z-10">
-    <input type="text" id="searchInput" 
-           class="w-full max-w-md mx-auto block bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-3xl px-6 py-4 shadow-xl focus:outline-none focus:border-orange-500"
-           placeholder="Cari produk viral...">
+    <!-- AUDIO BUTTON -->
+    <div class="px-6 py-6">
+      <button onclick="toggleAudio()" 
+              class="w-full bg-gradient-to-r from-orange-500 to-amber-500 py-6 rounded-3xl font-bold text-xl flex items-center justify-center gap-3 shadow-xl">
+        <i class="fas fa-volume-up text-3xl" id="audio-icon"></i>
+        <span>KLIK &amp; COBA DENGARKAN</span>
+      </button>
+    </div>
+
+    <!-- PRODUK -->
+    <div class="px-6 pb-8">
+      <h2 class="text-orange-400 text-xl font-bold mb-6 flex items-center gap-3">
+        🛒 DAFTAR RACUN SHOPEE TERBARU
+      </h2>
+      
+      <div class="space-y-4" id="product-list"></div>
+    </div>
+
+    <!-- SIOMAY -->
+    <div class="mx-6 bg-zinc-900 rounded-3xl p-7 text-center mb-10">
+      <h2 class="text-3xl font-bold mb-2">🍲 Siomay & Batagor Alvian</h2>
+      <p class="text-gray-400 mb-6">Fresh setiap hari • Antar ke rumahmu</p>
+      <a href="https://wa.me/62895705786677" target="_blank"
+         class="block bg-green-600 hover:bg-green-700 py-6 rounded-3xl font-bold text-xl">
+        🛵 Pesan Siomay Sekarang
+      </a>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="text-center py-10 text-gray-500 text-sm border-t border-zinc-800">
+      © 2025 Sobat88 Project<br>
+      Alvian Siomay Batagor • Jakarta
+    </footer>
   </div>
 
-  <!-- PRODUK -->
-  <section id="produk" class="max-w-6xl mx-auto px-4 py-16">
-    <h2 class="text-4xl font-bold text-center mb-12">🛍️ Produk Viral Terbaru</h2>
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" id="product-grid"></div>
-  </section>
-
-  <!-- TESTIMONI -->
-  <section class="bg-orange-100 dark:bg-gray-800 py-16">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-4xl font-bold text-center mb-10">❤️ Kata Pelanggan</h2>
-      <div id="testimonial" class="max-w-2xl mx-auto bg-white dark:bg-gray-900 p-8 rounded-3xl shadow-xl text-center"></div>
-    </div>
-  </section>
-
-  <!-- SIOMAY -->
-  <section id="siomay" class="py-16 bg-white dark:bg-gray-950">
-    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
-      <div>
-        <h2 class="text-5xl font-bold mb-6">🍲 Siomay & Batagor Alvian</h2>
-        <p class="text-lg mb-6">Fresh setiap hari. Saus kacang spesial. Siap antar ke rumahmu!</p>
-        <a href="https://wa.me/62895705786677" target="_blank" 
-           class="inline-block bg-green-600 text-white text-xl font-bold px-10 py-5 rounded-3xl hover:bg-green-700">
-          Pesan Sekarang via WhatsApp
-        </a>
-      </div>
-      <img src="https://source.unsplash.com/random/700x500/?siomay" alt="Siomay" class="rounded-3xl shadow-2xl">
-    </div>
-  </section>
-
-  <!-- FLOATING AUDIO + WA -->
-  <div onclick="toggleAudio()" class="fixed bottom-24 right-6 bg-orange-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-xl cursor-pointer z-50 text-2xl">
-    <i class="fas fa-music" id="audio-icon"></i>
-  </div>
-
-  <a href="https://wa.me/62895705786677" target="_blank" 
-     class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl text-3xl z-50">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-
+  <!-- AUDIO PLAYER -->
   <audio id="promo-audio" loop>
-    <source src="https://your-audio-link.mp3" type="audio/mpeg">
+    <source src="https://your-audio-link.mp3" type="audio/mpeg"> <!-- Ganti dengan link audio kamu -->
   </audio>
 
-  <!-- FOOTER -->
-  <footer class="bg-gray-900 text-white py-12 text-center">
-    <p class="text-2xl mb-2">© 2025 Sobat88 Project</p>
-    <p>Alvian Siomay Batagor • Jakarta</p>
-  </footer>
-
   <script>
-    // Dark Mode
-    function toggleDarkMode() {
-      document.documentElement.classList.toggle('dark');
-    }
-
-    // Countdown (contoh 3 hari lagi)
-    function startCountdown() {
-      const countdownEl = document.getElementById('countdown');
-      let time = 3 * 24 * 60 * 60; // 3 hari
-      setInterval(() => {
-        let d = Math.floor(time / 86400);
-        let h = Math.floor((time % 86400) / 3600);
-        let m = Math.floor((time % 3600) / 60);
-        countdownEl.innerHTML = `⏳ Promo Berakhir dalam: <span class="font-bold">${d}h ${h}j ${m}m</span>`;
-        time--;
-      }, 60000);
-    }
-
-    // Produk
-    const products = [ /* sama seperti sebelumnya */ 
-      { name: "Kipas Portable Viral", link: "https://s.shopee.co.id/4VZdlFsiqO", emoji: "🌬️" },
-      { name: "Produk Unik Pilihan 1", link: "https://s.shopee.co.id/1BJBo9woZ0", emoji: "🎁" },
-      // ... tambahkan semua produk kamu di sini
+    // ================== DAFTAR PRODUK ==================
+    const products = [
+      { name: "Kipas Portable Viral 120 Speed", emoji: "🌬️", link: "https://s.shopee.co.id/5q4IUbZtDx" },
+      { name: "Celengan Target Viral TikTok", emoji: "💰", link: "https://shopee.co.id/search?keyword=celengan%20target%20viral" },
+      { name: "Skincare Viral Korea", emoji: "🧴", link: "https://shopee.co.id/search?keyword=skincare%20viral" },
+      { name: "Baju One Set Korean Style", emoji: "👕", link: "https://shopee.co.id/search?keyword=baju%20one%20set%20korean%20style" },
+      { name: "Tas Wanita Kekinian Viral", emoji: "👜", link: "https://shopee.co.id/search?keyword=tas%20wanita%20kekinian" },
+      { name: "Lampu Hias LED Viral", emoji: "💡", link: "https://shopee.co.id/search?keyword=lampu%20hias%20led%20viral" },
+      { name: "Mini Fan Portable USB", emoji: "🌪️", link: "https://s.shopee.co.id/4VZdlFsiqO" },
+      { name: "Produk Unik Rumah Tangga", emoji: "🏠", link: "https://shopee.co.id/search?keyword=barang%20unik%20rumah%20tangga" }
     ];
 
-    const grid = document.getElementById('product-grid');
-    const searchInput = document.getElementById('searchInput');
-
-    function renderProducts(filtered) {
-      grid.innerHTML = '';
-      filtered.forEach(p => {
-        const card = document.createElement('div');
-        card.className = "bg-white dark:bg-gray-800 rounded-3xl shadow-xl overflow-hidden card-hover";
-        card.innerHTML = `
-          <div class="h-52 bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-7xl">${p.emoji}</div>
-          <div class="p-5">
-            <h3 class="font-semibold text-lg mb-4">${p.name}</h3>
-            <a href="${p.link}" target="_blank" class="block text-center bg-orange-600 hover:bg-orange-700 py-3.5 rounded-2xl font-bold text-white">Beli di Shopee →</a>
-          </div>
-        `;
-        grid.appendChild(card);
-      });
-    }
-
-    searchInput.addEventListener('input', () => {
-      const term = searchInput.value.toLowerCase();
-      const filtered = products.filter(p => p.name.toLowerCase().includes(term));
-      renderProducts(filtered);
+    // Render Produk
+    const container = document.getElementById('product-list');
+    products.forEach(p => {
+      const a = document.createElement('a');
+      a.href = p.link;
+      a.target = "_blank";
+      a.className = "product-btn flex items-center gap-4 bg-orange-600 hover:bg-orange-500 py-5 px-6 rounded-3xl font-semibold text-lg shadow-md";
+      a.innerHTML = `<span class="text-4xl">\( {p.emoji}</span><span> \){p.name}</span>`;
+      container.appendChild(a);
     });
 
-    renderProducts(products);
-    startCountdown();
-
-    // Testimoni Carousel
-    const testimonials = [
-      "Barangnya cepat sampai dan kualitas oke banget!",
-      "Siomaynya enak, recommended!",
-      "Harga murah, pengiriman cepat. Puas!"
-    ];
-    let i = 0;
-    setInterval(() => {
-      i = (i + 1) % testimonials.length;
-      document.getElementById('testimonial').innerHTML = `<p class="italic text-xl">"${testimonials[i]}"</p>`;
-    }, 4000);
-
-    // Audio
-    const audio = document.getElementById('promo-audio');
-    const icon = document.getElementById('audio-icon');
+    // Audio Function
     function toggleAudio() {
+      const audio = document.getElementById('promo-audio');
+      const icon = document.getElementById('audio-icon');
       if (audio.paused) {
         audio.play();
-        icon.classList.replace('fa-music', 'fa-pause');
+        icon.classList.replace('fa-volume-up', 'fa-pause');
       } else {
         audio.pause();
-        icon.classList.replace('fa-pause', 'fa-music');
+        icon.classList.replace('fa-pause', 'fa-volume-up');
       }
     }
   </script>
