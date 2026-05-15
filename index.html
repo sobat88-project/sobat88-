@@ -3,119 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobat88 - Siomay Batagor 88</title>
+    <title>Sobat88 - Katalog Siomay & Barang Unik</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background: radial-gradient(circle, #2c2c2c 0%, #000000 100%);
-            color: white;
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-        }
-        .container {
-            max-width: 400px;
-            width: 100%;
-            border: 2px solid #ff9800;
-            border-radius: 25px;
-            padding: 30px;
-            text-align: center;
-            background: rgba(0, 0, 0, 0.7);
-            box-shadow: 0 0 25px rgba(255, 152, 0, 0.3);
-            margin-top: 20px;
-        }
-        .logo-text {
-            color: #ff9800;
-            font-size: 1.8rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 5px;
-        }
-        .slogan {
-            font-style: italic;
-            color: #ccc;
-            margin-bottom: 25px;
-            font-size: 0.9rem;
-        }
-        .menu-list {
-            text-align: left;
-            list-style: none;
-            padding: 0;
-            margin: 20px 0;
-        }
-        .menu-list li {
-            padding: 12px 0;
-            border-bottom: 1px solid #333;
-            display: flex;
-            justify-content: space-between;
-            font-size: 1.1rem;
-        }
-        .price {
-            font-weight: bold;
-            color: #ff9800;
-        }
-        .btn-ai {
-            background: linear-gradient(45deg, #ff9800, #ff5722);
-            color: white;
-            border: none;
-            padding: 15px;
-            border-radius: 50px;
-            font-weight: bold;
-            cursor: pointer;
-            width: 100%;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 15px rgba(255, 87, 34, 0.4);
-        }
-        .btn-wa {
-            background-color: #25d366;
-            color: white;
-            text-decoration: none;
-            padding: 15px;
-            border-radius: 50px;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            box-shadow: 0 0 15px rgba(37, 211, 102, 0.4);
-        }
+        body { font-family: sans-serif; background: #121212; color: white; text-align: center; padding: 20px; }
+        .container { max-width: 400px; margin: auto; background: #1e1e1e; padding: 20px; border-radius: 15px; border: 2px solid #ff9800; }
+        h1 { color: #ff9800; margin-bottom: 5px; }
+        p { font-size: 0.9rem; color: #ccc; margin-bottom: 20px; }
+        .btn { display: block; background: #ff9800; color: black; text-decoration: none; padding: 12px; margin: 10px 0; border-radius: 10px; font-weight: bold; transition: 0.3s; }
+        .btn:hover { background: #e68a00; }
+        .btn-wa { background: #25d366; color: white; }
+        .footer { font-size: 0.7rem; margin-top: 20px; color: #777; }
     </style>
 </head>
 <body>
-
     <div class="container">
-        <div class="logo-text">SOBAT 88</div>
-        <div style="color: #fff; font-weight: bold; margin-bottom: 10px;">Siomay Batagor 88</div>
-        <p class="slogan">"Rasa Juara, Harga Merakyat"</p>
+        <h1>SOBAT 88</h1>
+        <p>Siomay Batagor & Racun Shopee Terpercaya</p>
+        
+        <a href="https://s.shopee.co.id/4VZdlFsiqO" class="btn" target="_blank">🔥 Kipas Portable Viral (Komisi Xtra)</a>
+        
+        <a href="https://s.shopee.co.id/1BJBo9woZ0" class="btn" target="_blank">✨ Barang Unik Pilihan Kedua</a>
 
-        <button class="btn-ai" onclick="mulaiBicara()">▶ DENGARKAN MENU 88</button>
-
-        <ul class="menu-list">
-            <li><span>Satuan</span> <span class="price">Rp1.000</span></li>
-            <li><span>Seporsi</span> <span class="price">Rp10.000</span></li>
-            <li><span>Porsi Komplit</span> <span class="price">Rp13.000</span></li>
-        </ul>
-
-        <a href="https://wa.me/6281234567890?text=Halo%20Sobat88,%20saya%20mau%20order!" class="btn-wa">
-            💬 PESAN SEKARANG
-        </a>
+        <hr style="border: 0.5px solid #444; margin: 20px 0;">
+        
+        <p>Mau pesan Siomay atau tanya barang?</p>
+        <a href="https://wa.me/62xxxxxxxxxxx" class="btn btn-wa" target="_blank">💬 Chat Admin (WhatsApp)</a>
+        
+        <div class="footer">© 2024 Sobat88 Project - Amanah & Terpercaya</div>
     </div>
-
-    <script>
-        function mulaiBicara() {
-            const teks = "Selamat datang di Sobat 88, Siomay Batagor delapan delapan. Menu kami hari ini: harga satuan hanya seribu rupiah, satu porsi sepuluh ribu rupiah, dan porsi komplit pakai telur tiga belas ribu rupiah. Silakan klik tombol whatsapp untuk memesan.";
-            const suara = new SpeechSynthesisUtterance(teks);
-            suara.lang = 'id-ID';
-            suara.rate = 0.9;
-            window.speechSynthesis.speak(suara);
-        }
-    </script>
-
 </body>
 </html>
-
-+
