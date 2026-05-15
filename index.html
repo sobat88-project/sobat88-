@@ -1,67 +1,181 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobat88 - Toko Rekomendasi Alvian</title>
-    <style>
-        body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: #121212; color: white; text-align: center; padding: 20px; margin: 0; }
-        .container { max-width: 450px; margin: 20px auto; background: #1e1e1e; padding: 30px 20px; border-radius: 25px; border: 2px solid #ff9800; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-        h1 { color: #ff9800; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 3px; font-size: 2rem; }
-        .slogan { font-size: 0.9rem; color: #aaa; margin-bottom: 25px; }
-        .promo-box { background: rgba(255, 152, 0, 0.1); border: 1px dashed #ff9800; padding: 15px; border-radius: 15px; margin-bottom: 25px; }
-        .promo-text { font-size: 1rem; color: #fff; line-height: 1.5; margin-bottom: 10px; }
-        .btn { display: block; background: #ff9800; color: black; text-decoration: none; padding: 14px; margin: 10px 0; border-radius: 12px; font-weight: bold; font-size: 1rem; transition: all 0.3s ease; border: none; width: 100%; cursor: pointer; }
-        .btn:hover { background: #fff; transform: translateY(-3px); box-shadow: 0 5px 15px rgba(255,152,0,0.3); }
-        .btn-ai { background: #333; color: #ff9800; border: 1px solid #ff9800; margin-bottom: 15px; }
-        .btn-wa { background: #25d366; color: white; margin-top: 20px; }
-        .list-header { font-size: 1.1rem; color: #ff9800; font-weight: bold; margin: 25px 0 15px 0; text-decoration: underline; }
-        .footer { font-size: 0.75rem; margin-top: 30px; color: #666; }
-        hr { border: 0.5px solid #333; margin: 25px 0; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobat88 - Rekomendasi Alvian</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body { font-family: 'Segoe UI', system-ui, sans-serif; }
+    .hero-bg { background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), url('https://source.unsplash.com/random/1600x900/?shopping') center/cover; }
+    .card-hover { transition: all 0.3s; }
+    .card-hover:hover { transform: translateY(-8px) scale(1.03); }
+  </style>
 </head>
-<body>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
 
-    <div class="container">
-        <h1>SOBAT 88</h1>
-        <p class="slogan">Katalog Siomay & Produk Pilihan Viral</p>
-
-        <div class="promo-box">
-            <p class="promo-text">"Bagi yang suka barang-barang unik dan murah, silakan klik tombol di bawah untuk belanja. Jangan lupa dengerin suara promonya ya!"</p>
-            <button onclick="playAudio()" class="btn btn-ai">🔊 KLIK & COBA DENGARKAN</button>
-        </div>
-
-        <div class="list-header">🛒 DAFTAR RACUN SHOPEE TERBARU</div>
-
-        <a href="https://s.shopee.co.id/1BJBo9woZ0" class="btn" target="_blank">🎁 Produk Unik Pilihan 1</a>
-        <a href="https://s.shopee.co.id/1Vw2CiTCGT" class="btn" target="_blank">🔥 Barang Viral Pilihan 2</a>
-        <a href="https://s.shopee.co.id/50VuN6kIkz" class="btn" target="_blank">✨ Rekomendasi Produk 3</a>
-        <a href="https://s.shopee.co.id/1Lcc0BIIfj" class="btn" target="_blank">⚡ Diskon Spesial Produk 4</a>
-        <a href="https://s.shopee.co.id/7VDFLT7F2L" class="btn" target="_blank">🏷️ Barang Murah Pilihan 5</a>
-        <a href="https://s.shopee.co.id/5q51MKLaSV" class="btn" target="_blank">🌟 Produk Pilihan 6</a>
-        <a href="https://s.shopee.co.id/W3V0M4ovN" class="btn" target="_blank">🔥 Viral Banget Produk 7</a>
-        <a href="https://s.shopee.co.id/qgLOoiiHq" class="btn" target="_blank">🎁 Koleksi Unik Produk 8</a>
-        <a href="https://s.shopee.co.id/1BJBnNIKJT" class="btn" target="_blank">✨ Barang Bagus Produk 9</a>
-        <a href="https://s.shopee.co.id/4VZdlFsiqO" class="btn" target="_blank">🔥 Kipas Portable Viral 10</a>
-
-        <hr>
-        
-        <p style="font-size: 0.9rem; color: #ccc;">Butuh bantuan atau pesan Siomay?</p>
-        <a href="https://wa.me/62895705786677" class="btn btn-wa" target="_blank">💬 HUBUNGI ADMIN SOBAT 88</a>
-        
-        <div class="footer">© 2026 Sobat88 Project - Alvian Siomay Batagor</div>
+  <!-- HEADER -->
+  <header class="bg-orange-600 text-white sticky top-0 z-50 shadow-lg">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <h1 class="text-3xl font-bold">SOBAT<span class="text-yellow-300">88</span></h1>
+      <div class="flex items-center gap-4">
+        <button onclick="toggleDarkMode()" class="text-2xl"><i class="fas fa-moon"></i></button>
+        <a href="https://wa.me/62895705786677" target="_blank" 
+           class="bg-green-500 hover:bg-green-600 px-5 py-2.5 rounded-full font-semibold flex items-center gap-2">
+          <i class="fab fa-whatsapp"></i> WA
+        </a>
+      </div>
     </div>
+  </header>
 
-    <script>
-    function playAudio() {
-        var msg = new SpeechSynthesisUtterance();
-        msg.text = "Halo kakak-kakak semua! Selamat datang di Sobat delapan delapan. Buat kalian yang suka banget sama barang-barang unik dan viral, aku sudah pilihin sepuluh produk terbaik di Shopee yang harganya murah tapi kualitasnya nggak kaleng-kaleng. Langsung diklik saja ya kak linknya sebelum kehabisan. Oh iya, buat yang mau pesan siomay batagor bumbu kacang yang mantap, langsung klik tombol WhatsApp di bawah ya. Selamat belanja!";
-        msg.lang = 'id-ID';
-        msg.rate = 0.9;
-        msg.pitch = 1.1; // Sedikit lebih ceria suaranya
-        window.speechSynthesis.speak(msg);
+  <!-- HERO -->
+  <section class="hero-bg text-white py-28 text-center">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-5xl md:text-7xl font-bold mb-4">Sobat88</h2>
+      <p class="text-2xl md:text-3xl mb-8">Barang Viral • Siomay Enak • Harga Mantap</p>
+      <div id="countdown" class="inline-flex gap-4 bg-black/50 backdrop-blur-md px-8 py-4 rounded-3xl text-xl mb-8"></div>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#produk" class="bg-orange-500 hover:bg-orange-600 text-xl font-bold px-10 py-5 rounded-3xl">🛒 Belanja Sekarang</a>
+        <a href="https://wa.me/62895705786677" target="_blank" class="bg-green-600 hover:bg-green-700 text-xl font-bold px-10 py-5 rounded-3xl">🍲 Pesan Siomay</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEARCH -->
+  <div class="max-w-6xl mx-auto px-4 -mt-6 relative z-10">
+    <input type="text" id="searchInput" 
+           class="w-full max-w-md mx-auto block bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-3xl px-6 py-4 shadow-xl focus:outline-none focus:border-orange-500"
+           placeholder="Cari produk viral...">
+  </div>
+
+  <!-- PRODUK -->
+  <section id="produk" class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-4xl font-bold text-center mb-12">🛍️ Produk Viral Terbaru</h2>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" id="product-grid"></div>
+  </section>
+
+  <!-- TESTIMONI -->
+  <section class="bg-orange-100 dark:bg-gray-800 py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-10">❤️ Kata Pelanggan</h2>
+      <div id="testimonial" class="max-w-2xl mx-auto bg-white dark:bg-gray-900 p-8 rounded-3xl shadow-xl text-center"></div>
+    </div>
+  </section>
+
+  <!-- SIOMAY -->
+  <section id="siomay" class="py-16 bg-white dark:bg-gray-950">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="text-5xl font-bold mb-6">🍲 Siomay & Batagor Alvian</h2>
+        <p class="text-lg mb-6">Fresh setiap hari. Saus kacang spesial. Siap antar ke rumahmu!</p>
+        <a href="https://wa.me/62895705786677" target="_blank" 
+           class="inline-block bg-green-600 text-white text-xl font-bold px-10 py-5 rounded-3xl hover:bg-green-700">
+          Pesan Sekarang via WhatsApp
+        </a>
+      </div>
+      <img src="https://source.unsplash.com/random/700x500/?siomay" alt="Siomay" class="rounded-3xl shadow-2xl">
+    </div>
+  </section>
+
+  <!-- FLOATING AUDIO + WA -->
+  <div onclick="toggleAudio()" class="fixed bottom-24 right-6 bg-orange-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-xl cursor-pointer z-50 text-2xl">
+    <i class="fas fa-music" id="audio-icon"></i>
+  </div>
+
+  <a href="https://wa.me/62895705786677" target="_blank" 
+     class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl text-3xl z-50">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <audio id="promo-audio" loop>
+    <source src="https://your-audio-link.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-white py-12 text-center">
+    <p class="text-2xl mb-2">© 2025 Sobat88 Project</p>
+    <p>Alvian Siomay Batagor • Jakarta</p>
+  </footer>
+
+  <script>
+    // Dark Mode
+    function toggleDarkMode() {
+      document.documentElement.classList.toggle('dark');
     }
-    </script>
 
+    // Countdown (contoh 3 hari lagi)
+    function startCountdown() {
+      const countdownEl = document.getElementById('countdown');
+      let time = 3 * 24 * 60 * 60; // 3 hari
+      setInterval(() => {
+        let d = Math.floor(time / 86400);
+        let h = Math.floor((time % 86400) / 3600);
+        let m = Math.floor((time % 3600) / 60);
+        countdownEl.innerHTML = `⏳ Promo Berakhir dalam: <span class="font-bold">${d}h ${h}j ${m}m</span>`;
+        time--;
+      }, 60000);
+    }
+
+    // Produk
+    const products = [ /* sama seperti sebelumnya */ 
+      { name: "Kipas Portable Viral", link: "https://s.shopee.co.id/4VZdlFsiqO", emoji: "🌬️" },
+      { name: "Produk Unik Pilihan 1", link: "https://s.shopee.co.id/1BJBo9woZ0", emoji: "🎁" },
+      // ... tambahkan semua produk kamu di sini
+    ];
+
+    const grid = document.getElementById('product-grid');
+    const searchInput = document.getElementById('searchInput');
+
+    function renderProducts(filtered) {
+      grid.innerHTML = '';
+      filtered.forEach(p => {
+        const card = document.createElement('div');
+        card.className = "bg-white dark:bg-gray-800 rounded-3xl shadow-xl overflow-hidden card-hover";
+        card.innerHTML = `
+          <div class="h-52 bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-7xl">${p.emoji}</div>
+          <div class="p-5">
+            <h3 class="font-semibold text-lg mb-4">${p.name}</h3>
+            <a href="${p.link}" target="_blank" class="block text-center bg-orange-600 hover:bg-orange-700 py-3.5 rounded-2xl font-bold text-white">Beli di Shopee →</a>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    searchInput.addEventListener('input', () => {
+      const term = searchInput.value.toLowerCase();
+      const filtered = products.filter(p => p.name.toLowerCase().includes(term));
+      renderProducts(filtered);
+    });
+
+    renderProducts(products);
+    startCountdown();
+
+    // Testimoni Carousel
+    const testimonials = [
+      "Barangnya cepat sampai dan kualitas oke banget!",
+      "Siomaynya enak, recommended!",
+      "Harga murah, pengiriman cepat. Puas!"
+    ];
+    let i = 0;
+    setInterval(() => {
+      i = (i + 1) % testimonials.length;
+      document.getElementById('testimonial').innerHTML = `<p class="italic text-xl">"${testimonials[i]}"</p>`;
+    }, 4000);
+
+    // Audio
+    const audio = document.getElementById('promo-audio');
+    const icon = document.getElementById('audio-icon');
+    function toggleAudio() {
+      if (audio.paused) {
+        audio.play();
+        icon.classList.replace('fa-music', 'fa-pause');
+      } else {
+        audio.pause();
+        icon.classList.replace('fa-pause', 'fa-music');
+      }
+    }
+  </script>
 </body>
 </html>
