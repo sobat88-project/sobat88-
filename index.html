@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sobat88 - Rekomendasi Alvian</title>
+  <title>Sobat88 - Siomay Batagor Alvian</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body { font-family: system-ui, sans-serif; }
-    .product-btn { transition: all 0.3s; }
-    .product-btn:hover { transform: translateY(-4px); box-shadow: 0 10px 20px rgba(249, 115, 22, 0.4); }
+    .product-card { transition: all 0.3s; }
+    .product-card:hover { transform: translateY(-5px); }
   </style>
 </head>
 <body class="bg-zinc-950 text-white">
@@ -18,94 +18,104 @@
 
     <!-- HEADER -->
     <div class="bg-orange-600 py-6 text-center">
-      <h1 class="text-4xl font-bold tracking-tight">SOBAT<span class="text-yellow-300">88</span></h1>
-      <p class="text-sm mt-1 opacity-90">Rekomendasi Alvian • Viral & Unik</p>
+      <h1 class="text-4xl font-bold">SOBAT<span class="text-yellow-300">88</span></h1>
+      <p class="text-sm">Siomay Batagor Alvian</p>
     </div>
 
-    <!-- PROMO TEXT -->
-    <div class="px-6 py-8 text-center border-b border-orange-900">
-      <p class="text-lg leading-relaxed">
-        "Bagi yang suka barang-barang unik dan murah, silakan klik tombol di bawah untuk belanja.<br>
-        Jangan lupa dengerin suara promonya ya!"
+    <!-- PROMO SIOMAY -->
+    <div class="px-6 py-8 text-center bg-zinc-900 border-b border-orange-900">
+      <h2 class="text-3xl font-bold mb-4">🍲 SIOMAY & BATAGOR ALVIAN</h2>
+      <p class="text-lg mb-6">
+        Fresh • Enak • Saus Kacang Nagih<br><br>
+        <strong>Harga Spesial:</strong><br>
+        • 1 biji = Rp 1.000<br>
+        • Porsi Biasa = Rp 10.000<br>
+        • Porsi Lengkap + Telur = Rp 13.000
       </p>
-    </div>
-
-    <!-- AUDIO BUTTON -->
-    <div class="px-6 py-6">
-      <button onclick="toggleAudio()" 
-              class="w-full bg-gradient-to-r from-orange-500 to-amber-500 py-6 rounded-3xl font-bold text-xl flex items-center justify-center gap-3 shadow-xl">
-        <i class="fas fa-volume-up text-3xl" id="audio-icon"></i>
-        <span>KLIK &amp; COBA DENGARKAN</span>
-      </button>
-    </div>
-
-    <!-- PRODUK -->
-    <div class="px-6 pb-8">
-      <h2 class="text-orange-400 text-xl font-bold mb-6 flex items-center gap-3">
-        🛒 DAFTAR RACUN SHOPEE TERBARU
-      </h2>
-      
-      <div class="space-y-4" id="product-list"></div>
-    </div>
-
-    <!-- SIOMAY -->
-    <div class="mx-6 bg-zinc-900 rounded-3xl p-7 text-center mb-10">
-      <h2 class="text-3xl font-bold mb-2">🍲 Siomay & Batagor Alvian</h2>
-      <p class="text-gray-400 mb-6">Fresh setiap hari • Antar ke rumahmu</p>
-      <a href="https://wa.me/62895705786677" target="_blank"
-         class="block bg-green-600 hover:bg-green-700 py-6 rounded-3xl font-bold text-xl">
-        🛵 Pesan Siomay Sekarang
+      <a href="https://wa.me/62895705786677" target="_blank" 
+         class="block bg-green-600 hover:bg-green-700 py-6 rounded-3xl font-bold text-xl mb-8">
+        🛵 PESAN SIOMAY SEKARANG
       </a>
     </div>
 
-    <!-- FOOTER -->
-    <footer class="text-center py-10 text-gray-500 text-sm border-t border-zinc-800">
-      © 2025 Sobat88 Project<br>
-      Alvian Siomay Batagor • Jakarta
+    <!-- AUDIO GOOGLE AI -->
+    <div class="px-6 py-6">
+      <button onclick="speakPromo()" 
+              class="w-full bg-gradient-to-r from-orange-500 to-amber-500 py-6 rounded-3xl font-bold text-xl flex items-center justify-center gap-3">
+        <i class="fas fa-volume-up text-3xl" id="audio-icon"></i>
+        <span>DENGARKAN SUARA AI GOOGLE</span>
+      </button>
+    </div>
+
+    <!-- PRODUK SHOPEE -->
+    <div class="px-6 pb-8">
+      <h2 class="text-orange-400 text-xl font-bold mb-6">🛒 PRODUK VIRAL SHOPEE</h2>
+      <div class="space-y-4" id="product-list"></div>
+    </div>
+
+    <footer class="text-center py-10 text-gray-500 text-sm">
+      © 2025 Sobat88 Project - Alvian Siomay Batagor
     </footer>
   </div>
 
-  <!-- AUDIO PLAYER -->
-  <audio id="promo-audio" loop>
-    <source src="https://your-audio-link.mp3" type="audio/mpeg"> <!-- Ganti dengan link audio kamu -->
-  </audio>
-
   <script>
-    // ================== DAFTAR PRODUK ==================
-    const products = [
-      { name: "Kipas Portable Viral 120 Speed", emoji: "🌬️", link: "https://s.shopee.co.id/5q4IUbZtDx" },
-      { name: "Celengan Target Viral TikTok", emoji: "💰", link: "https://shopee.co.id/search?keyword=celengan%20target%20viral" },
-      { name: "Skincare Viral Korea", emoji: "🧴", link: "https://shopee.co.id/search?keyword=skincare%20viral" },
-      { name: "Baju One Set Korean Style", emoji: "👕", link: "https://shopee.co.id/search?keyword=baju%20one%20set%20korean%20style" },
-      { name: "Tas Wanita Kekinian Viral", emoji: "👜", link: "https://shopee.co.id/search?keyword=tas%20wanita%20kekinian" },
-      { name: "Lampu Hias LED Viral", emoji: "💡", link: "https://shopee.co.id/search?keyword=lampu%20hias%20led%20viral" },
-      { name: "Mini Fan Portable USB", emoji: "🌪️", link: "https://s.shopee.co.id/4VZdlFsiqO" },
-      { name: "Produk Unik Rumah Tangga", emoji: "🏠", link: "https://shopee.co.id/search?keyword=barang%20unik%20rumah%20tangga" }
-    ];
+    // Teks untuk Suara AI Google
+    const promoText = `Halo sobat semua! 
+    Selamat datang di Sobat88.
+    Kami menyediakan siomay batagor fresh dengan saus kacang spesial.
+    Harganya sangat murah, satu biji hanya seribu rupiah.
+    Porsi biasa sepuluh ribu, porsi lengkap dengan telur tiga belas ribu.
+    Rasa dijamin enak dan nagih.
+    Mau pesan? Langsung chat WhatsApp saja.
+    Jangan lupa juga cek produk viral di Shopee di bawah ini.
+    Terima kasih dan selamat berbelanja!`;
 
-    // Render Produk
-    const container = document.getElementById('product-list');
-    products.forEach(p => {
-      const a = document.createElement('a');
-      a.href = p.link;
-      a.target = "_blank";
-      a.className = "product-btn flex items-center gap-4 bg-orange-600 hover:bg-orange-500 py-5 px-6 rounded-3xl font-semibold text-lg shadow-md";
-      a.innerHTML = `<span class="text-4xl">\( {p.emoji}</span><span> \){p.name}</span>`;
-      container.appendChild(a);
-    });
+    function speakPromo() {
+      if ('speechSynthesis' in window) {
+        const utterance = new SpeechSynthesisUtterance(promoText);
+        utterance.lang = 'id-ID';           // Bahasa Indonesia
+        utterance.rate = 0.95;              // Kecepatan
+        utterance.pitch = 1.05;             // Nada suara
+        utterance.volume = 1;
 
-    // Audio Function
-    function toggleAudio() {
-      const audio = document.getElementById('promo-audio');
-      const icon = document.getElementById('audio-icon');
-      if (audio.paused) {
-        audio.play();
+        // Coba pakai suara Google
+        const voices = speechSynthesis.getVoices();
+        const googleVoice = voices.find(voice => voice.name.includes('Google') && voice.lang === 'id-ID');
+        if (googleVoice) utterance.voice = googleVoice;
+
+        speechSynthesis.cancel(); // Stop kalau ada yang sedang bicara
+        speechSynthesis.speak(utterance);
+
+        // Animasi ikon
+        const icon = document.getElementById('audio-icon');
         icon.classList.replace('fa-volume-up', 'fa-pause');
+        setTimeout(() => icon.classList.replace('fa-pause', 'fa-volume-up'), 8000);
       } else {
-        audio.pause();
-        icon.classList.replace('fa-pause', 'fa-volume-up');
+        alert("Browser kamu tidak mendukung suara AI.");
       }
     }
+
+    // === MASUKKAN PRODUK KAMU DISINI ===
+    const products = [
+      { name: "Kipas Portable Viral", link: "MASUKKAN_LINK_AFFILIATE_1", emoji: "🌬️" },
+      { name: "Celengan Target Viral", link: "MASUKKAN_LINK_AFFILIATE_2", emoji: "💰" },
+      { name: "Skincare Viral", link: "MASUKKAN_LINK_AFFILIATE_3", emoji: "🧴" },
+      // Tambah lagi sesuai keinginan
+    ];
+
+    const container = document.getElementById('product-list');
+    products.forEach(p => {
+      const card = document.createElement('a');
+      card.href = p.link;
+      card.target = "_blank";
+      card.className = "product-card flex items-center gap-4 bg-zinc-900 hover:bg-zinc-800 border border-orange-600 p-4 rounded-3xl";
+      card.innerHTML = `
+        <div class="w-16 h-16 bg-orange-600 rounded-2xl flex items-center justify-center text-4xl">${p.emoji}</div>
+        <div class="flex-1 font-semibold">${p.name}</div>
+        <span class="text-2xl text-orange-400">→</span>
+      `;
+      container.appendChild(card);
+    });
   </script>
 </body>
 </html>
